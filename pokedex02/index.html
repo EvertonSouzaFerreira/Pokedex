@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <title>Pokedex</title>
+</head>
+<body>
+    
+    <div class="container">
+
+    <div class="blue-btn"></div>
+      <div class="container-minilight">
+        <div class="red-light"></div>
+        <div class="yellow-light"></div>
+        <div class="green-light"></div>
+      </div>
+      <div class="container-tela">
+        <div class="tela"></div>
+        <div class="btns-primeir-tela">
+
+          <div class="btn-round"></div>
+          <div class="btn-start-select"></div>
+
+          <div class="btn-setas">
+            <div class="btn-top"></div>
+            <div class="btn-botton"></div>
+            <div class="btn-right"></div>
+            <div class="btn-left"></div>
+            <div class="btn-meio"></div>
+          </div>
+        </div>
+      </div>
+      
+
+        <div class="card">
+            <div class="card-inner">
+                <div class="front-face">
+                    <div id="triangulo-para-direita"></div>
+                    <div class="porta-frente-footer"></div>
+                </div>
+                <div class="back-face">BACK</div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        const cardInner = document.querySelector('.card-inner')
+        cardInner.addEventListener('click', () => {
+            cardInner.classList.toggle('flip')
+        })
+    </script>
+</body>
+</html>
