@@ -9,19 +9,30 @@
 </head>
 <body>
     
-    <div class="container">
+    
+
+
+    <div class="box">
+      <div class="box__face box__face--back"></div>
+      <div class="box__face box__face--front">
+
+
+<div class="container">
 
     <div class="blue-btn"></div>
+    
       <div class="container-minilight">
         <div class="red-light"></div>
         <div class="yellow-light"></div>
         <div class="green-light"></div>
       </div>
       <div class="container-tela">
-        <div class="tela"></div>
-        <div class="btns-primeir-tela">
+        <div class="tela">
+            
+        </div>
+        <div class="btns-primeir-tela ">
 
-          <div class="btn-round"></div>
+          <div class="btn-round "></div>
           <div class="btn-start-select"></div>
 
           <div class="btn-setas">
@@ -41,17 +52,43 @@
                     <div id="triangulo-para-direita"></div>
                     <div class="porta-frente-footer"></div>
                 </div>
-                <div class="back-face">BACK</div>
+                <div class="back-face"></div>
             </div>
         </div>
     </div>
 
 
+      </div>
+      <div class="box__face box__face--left"></div>
+      <div class="box__face box__face--right"></div>
+      <div class="box__face box__face--top"></div>
+      <div class="box__face box__face--bottom"></div>
+    </div>
+
+
     <script>
+        
+        const btnTop = document.querySelector('.btn-start-select')
         const cardInner = document.querySelector('.card-inner')
-        cardInner.addEventListener('click', () => {
-            cardInner.classList.toggle('flip')
+        const container = document.querySelector('.container-tela')
+        const box = document.querySelector('.box')
+         
+        btnTop.addEventListener('click', () => {
+            alert('funcionando')
         })
+
+        const handleFlip = () => {
+          cardInner.classList.toggle('flip')
+          box.classList.toggle('move-box')
+          setTimeout(() =>{
+            container.classList.toggle('nivel-z-index') 
+          },350)
+          
+        }
+        
+        cardInner.addEventListener('click', handleFlip)
+
+        
     </script>
 </body>
 </html>
